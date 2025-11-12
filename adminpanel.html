@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit Blog Post</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+
+  h1 { text-align: center; margin-bottom: 30px; }
+
+  form {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+  }
+
+  label { font-weight: bold; }
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  input[type="file"] { margin-bottom: 15px; }
+
+  button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  button:hover { background-color: #0056b3; }
+
+  #response { margin-top: 20px; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>Submit Your Blog Post</h1>
+
+<form id="blogForm" enctype="multipart/form-data">
+  <label>Title:</label>
+  <input type="text" name="title" required>
+
+  <label>Image:</label>
+  <input type="file" name="image" accept="image/*" required>
+
+  <label>Explanation:</label>
+  <textarea name="explanation" rows="5" required></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+
+<div id="response"></div>
+
+<script>
+document.getElementById('blogForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const formData = new FormData(this);
+
+    fetch('submit_blog.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('response').innerText = data;
+        this.reset();
+    })
+    .catch(error => {
+        document.getElementById('response').innerText = "Error submitting post.";
+        console.error(error);
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+    .post,.hero1{
+        opacity: 0;
+        /* filter: blur(5px); */
+        transform: translateX(-100%);
+        transition: all 1s;
+    }
+    .show{
+        opacity: 1;
+        /* filter: blur(0); */
+        transform: translateX(0);
+    }
+    .go:nth-child(1){
+        transition-delay: 200ms;
+    }
+    .go:nth-child(2){
+        transition-delay: 400ms;
+    }
+    .go:nth-child(3){
+        transition-delay: 600ms;
+    }
+
+   /* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Photo Section */
+.photo-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.photo-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Q&A Section */
+.qa-section {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.qa-section p {
+    margin-bottom: 15px;
+}
+
+/* Iframe Styles */
+iframe.post {
+    margin-top: 30px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+       
+      
+        <div class="topnav" id="myTopnav">
+             <a class="active">COuchJK</a>
+             <a class="menu"  >
+                <select class="lan" id="mySelect" onchange="navigateTopage()" >
+                    <option value="index2.html"class="menu">🌐English</option>
+                    <option value="index3.html" class="menu" >🌐Germany</option>
+                </select> </a>
+             <a href="#home" class="menu">Home</a>
+             <a href="#about" class="menu">About Me</a>
+             <a href="#services" class="menu">Services</a>
+             <a href="#testimonials" class="menu">Testimonials</a>
+             <a href="#blog" class="menu">Blog</a>
+             <a href="#contact" class="menu">Contact</a>
+        
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+            </header>
+<!-- Hero Section -->
+<section id="home" class=" hero">
+    <div class="container">
+        <h2 class="go hero1">Transform Your Life with Professional Coaching</h2>
+        <p class="go hero1">Welcome! I’m Joachim Kässmodel, a certified coach and trainer dedicated to helping you reach your full potential.</p>
+        <a href="#contact" class="go hero1 btn">Book a Free Consultation</a>
+    </div>
+</section>
+
+
+<section id="about" class="about">
+    <div class="container about-container">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>I’m Joachim Kässmodel, a professional coach with over [X years] of experience helping individuals and organizations achieve their goals.</p>
+            <p>My journey started with a passion for personal development, leading to certifications in [Your Certifications].</p>
+            <p>With a client-centered approach, I guide my clients through transformative experiences that foster growth and success.</p>
+            <p>After graduating from German-French 🇩🇪🇫🇷 European Business Programme in 2004, Joachim Kässmodel worked as a successful Sales & Marketing Manager in Spain, France and Italy. Despite his life running on controlled tracks, he decided to embark on an unusual journey: a bicycle tour following Marco Polo's footsteps through Europe to Asia 🚴</p>
+        </div>
+        <div class="about-image">
+            <img id="changingImage" src="images/OIP.jpg" alt="About me">
+        </div>
+    </div>
+
+    <p>♂️ As a The Bike Ambassador he rode his cable for 18 months through remote areas and pulsating cities. An accident in China forced him to pause for a year in the Middle Kingdom 🇨🇳🤕 During that time, he met his current wife, with whom he now runs an international consulting agency with connections in China, the United States and Germany. His agency supports companies, associations, associations and government representatives to successfully establish or expand in China or abroad Unternehmen A typical, untypical EBPler! 😄
+       We asked the FH alumnus four questions about his studies and profession:</p>
+
+    <section class="photo-section">
+        <div class="photo-container">
+            <img src="images/bikeimbass.jpg" alt="Your Photo Description">
+        </div>
+    </section>
+    
+    <div class="qa-section">
+        <p>1️⃣ Joachim, what's special about your job?<br>
+        ▶️ The constant demands in a very rapidly growing market, as well as the opportunity to participate and actively contribute to this growth, make my work an interesting challenge. Whether it’s organizing business conferences, initiating solution-oriented business matchmaking, planning tailored delegation trips or strategic business consulting, all of these bring its peculiarity to a country as culturally diverse as China 👨 💼<br>
+        2️⃣ What are the three typical qualities an EBP player must bring with you today?<br>
+        ▶️ Studying EBP has been the foundation stone for my further life path inden Through it, I've learned to successfully adapt to different cultures, adapt my understanding of business economy flexibly to changing frameworks and overcome language barriers. A typical EBP player should bring openness to foreign cultures, flexibility through intercultural challenges and interest in foreign languages🦸 ♂️<br>
+        3️⃣ What do you enjoy about your job?<br>
+        ▶️ It gives me a lot of fun to see that commitment bears fruit. Recently, we had a visit from representatives of the Board of Directors of FH Münster and the Münster School of Business (MSB) to further expand the existing cooperation with the Chinese partner university, Xihua University. The foundation stone of this cooperation was laid by my consulting agency Ferrante & Partners in 2017. In 2018 the first students from Münster came to Chengdu and one EBP student has already successfully completed an internship with us 🤝x<br>
+        4️⃣ What is your tip for future BWLers/EBPlers - what should they pay attention to in training?<br>
+        ▶️ In view of the ongoing globalization - in conjunction with increasingly emerging populism - I would like to recommend to every young student to face the world with open eyes.
+        To step up, be tolerant towards strangers and lay the foundation stones for a better understanding of the nation through traveling and learning foreign languages and specialties 🌎 A BWL study is a good basic training to be armed for life’s challenges such as career, starting a business and family planning 💪
+        ✅ In my opinion, having a goal in life is another important basic requirement: because it provides the motivation to overcome a broken path with success.<br>
+        I wish all the students much success on your journey!<br>
+        Your Joachim Kässmodel 🙋 ♂️<br>
+        EBP Germany - France 2000 - 2004</p>
+    </div>
+    
+    <iframe src="img_slider.html" width="100%" height="500px" class="post"></iframe>
+</section>
+
+
+
+    <!-- Blog Section -->
+<section id="blog" class="blog" class="post">
+    <div class="container">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-posts">
+            <div class="go post">
+                <img class="ok" src="images/10952411_10152590710712341_4191668342687805484_n.jpg" alt="">
+                <div class="pad">
+                    <h3>My Trip to iraq</h3>
+                <p>Something intersting happened to me on Iraq. This man you see on photo...</p>
+                <a href="#" class="apo">Read More</a>
+                </div>
+            </div>
+            <div class="go post">
+                <img class="ok" src="images/soliders.jpg" alt="">
+                <div class="pad">
+                    <h3>World peace</h3>
+                <p>They said: "please tell your friends that we want peace,no war!"...</p><br>
+                <a href="#"class="apo">Read More</a>
+                </div>
+            </div>
+            <div class="go post">
+                <img class="ok" src="images/shapeimage_2.png" alt="">
+                <div class="pad">
+                    <h3>Ferrante & Partners, Ltd.</h3>
+                <p>I am one of the founding partners of Ferrante & Partners, Ltd., an investment consulting firm that...</p><br>
+                <a href="#" class="apo">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+
+    const observer = new IntersectionObserver((entries) =>{
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.post,.hero1');
+    hiddenElements.forEach((el) => observer.observe(el));
+</script>
+</body>
+</html>

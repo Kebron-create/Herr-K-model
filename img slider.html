@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #fff;
+            margin: 0;
+        }
+
+        .wrapp7d8 {
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .imgBx23f {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            transition: 1s;
+        }
+
+        .slide_sdf {
+            margin: 0 30px;
+            position: relative;
+        }
+
+        img {
+            height: 360px;
+            width: 440px;
+            filter: saturate(10%);
+            transition: 0.7s;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+        }
+
+        .btn_sdf {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            border-radius: 20px;
+            transition: 0.7s;
+        }
+
+        .btn_sdf:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        /*
+        /* Slider targeting */
+        #sld1abc:target ~ .imgBx23f #img1xyz,
+        #sld2abc:target ~ .imgBx23f #img2xyz,
+        #sld3abc:target ~ .imgBx23f #img3xyz,
+        #sld4abc:target ~ .imgBx23f #img4xyz,
+        #sld5abc:target ~ .imgBx23f #img5xyz,
+        #sld6abc:target ~ .imgBx23f #img6xyz,
+        #sld7abc:target ~ .imgBx23f #img7xyz,
+        #sld8abc:target ~ .imgBx23f #img8xyz {
+            filter: saturate(100%);
+            height: auto;
+            width: 540px;
+            background-color: transparent;
+        }
+        img:hover {
+          filter: saturate(100%);
+          transition: 0.7s;
+          background-color: transparent;
+        }
+     
+        #sld1abc:target ~ .imgBx23f {
+            left: 20%; /* Adjust to position */
+        }
+
+        #sld2abc:target ~ .imgBx23f {
+            left: -10%; /* Adjust to position */
+        }
+
+        #sld3abc:target ~ .imgBx23f {
+            left: -40%; /* Adjust to position */
+        }
+
+        #sld4abc:target ~ .imgBx23f {
+            left: -70%; /* Adjust to position */
+        }
+
+        #sld5abc:target ~ .imgBx23f {
+            left: -100%; /* Adjust to position */
+        }
+
+        #sld6abc:target ~ .imgBx23f {
+            left: -130%; /* Adjust to position */
+        }
+
+        #sld7abc:target ~ .imgBx23f {
+            left: -160%; /* Adjust to position */
+        }
+        #sld8abc:target ~ .imgBx23f {
+            left: -190%; /* Adjust to position */
+        }
+        @media (max-width: 480px) {
+            img {
+            height: auto;
+            width: 240px;
+            }
+            #sld1abc:target ~ .imgBx23f #img1xyz,
+        #sld2abc:target ~ .imgBx23f #img2xyz,
+        #sld3abc:target ~ .imgBx23f #img3xyz,
+        #sld4abc:target ~ .imgBx23f #img4xyz,
+        #sld5abc:target ~ .imgBx23f #img5xyz,
+        #sld6abc:target ~ .imgBx23f #img6xyz,
+        #sld7abc:target ~ .imgBx23f #img7xyz,
+        #sld8abc:target ~ .imgBx23f #img8xyz {
+            filter: saturate(100%);
+            height: auto;
+            width: 280px;
+            background-color: transparent;
+        }
+        }
+        @media (max-width: 768px) {
+    .imgBx23f img {
+        height: 300px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .imgBx23f img {
+        height: 240px;
+        width: 280px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+<div class="wrapp7d8">
+    <span class="sld_def" id="sld1abc"></span>
+    <span class="sld_def" id="sld2abc"></span>
+    <span class="sld_def" id="sld3abc"></span>
+    <span class="sld_def" id="sld4abc"></span>
+    <span class="sld_def" id="sld5abc"></span>
+    <span class="sld_def" id="sld6abc"></span>
+    <span class="sld_def" id="sld7abc"></span>
+    <span class="sld_def" id="sld8abc"></span>
+
+
+    <div class="imgBx23f">
+        <div class="slide_sdf" id="slide_x1">
+            <img src="images/imgslider1.jpg" alt="" id="img1xyz">
+            <a href="#sld1abc" class="btn_sdf" id="btn1abc"></a>
+        </div>
+        <div class="slide_sdf" id="slide_x2">
+            <img src="images/imgslider2.jpg" alt="" id="img2xyz">
+            <a href="#sld2abc" class="btn_sdf" id="btn2abc"></a>
+        </div>
+        <div class="slide_sdf" id="slide_x3">
+            <img src="images/imgslider3.jpg" alt="" id="img3xyz">
+            <a href="#sld3abc" class="btn_sdf" id="btn3abc"></a>
+        </div>
+        <div class="slide_sdf" id="slide_x4">
+            <img src="images/imgslider4.jpg" alt="" id="img4xyz">
+            <a href="#sld4abc" class="btn_sdf" id="btn4abc"></a>
+        </div>
+        <div class="slide_sdf" id="slide_x5">
+            <img src="images/imgslider5.jpg" alt="" id="img5xyz">
+            <a href="#sld5abc" class="btn_sdf" id="btn5abc"></a>
+        </div>
+        <div class="slide_sdf" id="slide_x6">
+            <img src="images/imgslider6.jpg" alt="" id="img6xyz">
+            <a href="#sld6abc" class="btn_sdf" id="btn6abc"></a>
+        </div>
+        <div class="slide_sdf" id="slide_x7">
+            <img src="images/imgslider7.jpg" alt="" id="img7xyz">
+            <a href="#sld7abc" class="btn_sdf" id="btn7abc"></a>
+        </div>
+        <div class="slide_sdf" id="slide_x8">
+            <img src="images/joachim-kässmodel.1024x1024.jpg" alt="" id="img8xyz">
+            <a href="#sld8abc" class="btn_sdf" id="btn8abc"></a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
